@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 import { api } from '../services/api';
 import { Button } from '../components/Button';
-import { GenreResponseProps } from "../App";
+
+
+export interface GenreResponseProps {
+  id: number;
+  name: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';
+  title: string;
+}
 
 interface SideBarProps {
   selectedGenreId: number
